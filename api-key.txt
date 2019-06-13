@@ -1,0 +1,14 @@
+13b1230d
+
+api url:
+
+http://www.omdbapi.com/?i=tt3896198&apikey=13b1230d
+
+api req:
+http://www.omdbapi.com/?apikey=13b1230d&plot=full&
+
+img req:
+http://img.omdbapi.com/?apikey=13b1230d&
+
+search:
+http://www.omdbapi.com/?s=avengers+ultron&apikey=13b1230d
