@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/10-movie_db/static/css/main.ef901846.chunk.css",
+    "main.css": "/10-movie_db/static/css/main.6b4be04e.chunk.css",
     "main.js": "/10-movie_db/static/js/main.a0314537.chunk.js",
     "main.js.map": "/10-movie_db/static/js/main.a0314537.chunk.js.map",
     "runtime~main.js": "/10-movie_db/static/js/runtime~main.50a1fd1a.js",
@@ -8,9 +8,10 @@
     "static/js/2.9e627b49.chunk.js": "/10-movie_db/static/js/2.9e627b49.chunk.js",
     "static/js/2.9e627b49.chunk.js.map": "/10-movie_db/static/js/2.9e627b49.chunk.js.map",
     "index.html": "/10-movie_db/index.html",
-    "precache-manifest.9692f5bae2a8e71f43ab96e6d4a96ec6.js": "/10-movie_db/precache-manifest.9692f5bae2a8e71f43ab96e6d4a96ec6.js",
+    "precache-manifest.706423bc234117db2700d392fd5eb4ff.js": "/10-movie_db/precache-manifest.706423bc234117db2700d392fd5eb4ff.js",
     "service-worker.js": "/10-movie_db/service-worker.js",
-    "static/css/main.ef901846.chunk.css.map": "/10-movie_db/static/css/main.ef901846.chunk.css.map",
-    "static/media/imdb.svg": "/10-movie_db/static/media/imdb.8ba3391e.svg"
+    "static/css/main.6b4be04e.chunk.css.map": "/10-movie_db/static/css/main.6b4be04e.chunk.css.map",
+    "static/media/imdb.svg": "/10-movie_db/static/media/imdb.8ba3391e.svg",
+    "static/media/App.css": "/10-movie_db/static/media/theater-seats.ee5a7ce5.jpg"
   }
 }

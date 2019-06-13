@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c2a14a78f3bcce090319e3d951bd2ee8",
+    "revision": "8243deb9709375c6a78002ec6e5ac371",
     "url": "/10-movie_db/index.html"
   },
   {
-    "revision": "d52a5a10aaee822a57f3",
-    "url": "/10-movie_db/static/css/main.ef901846.chunk.css"
+    "revision": "0cd0923bad448953bc5d",
+    "url": "/10-movie_db/static/css/main.6b4be04e.chunk.css"
   },
   {
     "revision": "59a323e718a79b15bbe6",
     "url": "/10-movie_db/static/js/2.9e627b49.chunk.js"
   },
   {
-    "revision": "d52a5a10aaee822a57f3",
+    "revision": "0cd0923bad448953bc5d",
     "url": "/10-movie_db/static/js/main.a0314537.chunk.js"
   },
   {
@@ -22,5 +22,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8ba3391eb9f58ef83b959400b15a409b",
     "url": "/10-movie_db/static/media/imdb.8ba3391e.svg"
+  },
+  {
+    "revision": "ee5a7ce5b12706a454f94f773fed9430",
+    "url": "/10-movie_db/static/media/theater-seats.ee5a7ce5.jpg"
   }
 ]);
