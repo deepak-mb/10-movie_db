@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import Navbar from "./components/layout/Navbar";
 import Movies from "./components/movies/Movies";
 import MovieDetails from "./components/movies/MovieDetails";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   render() {
