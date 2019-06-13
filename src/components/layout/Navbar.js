@@ -5,7 +5,7 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-md navbar-dark">
-        <Link to="/" className="navbar-brand" href="!#">
+        <Link to="/10-movie_db/" className="navbar-brand" href="!#">
           Movies Search
         </Link>
         {/* <button

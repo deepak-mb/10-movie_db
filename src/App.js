@@ -16,7 +16,7 @@ class App extends Component {
             <Navbar />
             <div className="container">
               <Switch>
-                <Route exact path="/" component={Movies} />
+                <Route exact path="/10-movie_db/" component={Movies} />
                 <Route
                   exact
                   path="/moviedetails/:id"
