@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { getMovieDetails } from "../../actions/movieActions";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import "./movieDetails.css";
 
 class MovieDetails extends Component {
   state = {};
@@ -86,21 +87,29 @@ class MovieDetails extends Component {
     return (
       <div>
         <div className="row">
-          <div className="col">
-            <img src={Poster} alt="Movie Poster" onError={this.addDefaultSrc} />
+          <div className="col-12 col-md-6">
+            <img
+              src={Poster}
+              alt="Movie Poster"
+              onError={this.addDefaultSrc}
+              className="d-block"
+              style={{ margin: "auto" }}
+            />
           </div>
-          <div className="col">
-            <h4>
+          <div className="col-12 col-md-6 py-md-2">
+            <h4 className="text-darkgray">
               {Title}
               <sup>
                 <i className="fa fa-star" style={{ color: "#f2b01e" }} />
                 {imdbRating}
               </sup>
             </h4>
-            <p>Release Date: {Released}</p>
-            <p>Genre: {Genre}</p>
-            <p>Runtime: {Runtime}</p>
-            <p>Plot: {Plot}</p>
+            <p className="text-darkgray">Release Date: {Released}</p>
+            <p className="text-darkgray">Genre: {Genre}</p>
+            <p className="text-darkgray">Runtime: {Runtime}</p>
+            <p className="text-darkgray" style={{ textAlign: "justify" }}>
+              Plot: {Plot}
+            </p>
           </div>
         </div>
         <div className="row my-3">

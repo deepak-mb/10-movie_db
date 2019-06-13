@@ -1,5 +1,11 @@
 body {
   font-family: "Merriweather", serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+    url(/static/media/theater-seats.ee5a7ce5.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Fade in animation */
@@ -45,13 +51,21 @@ body {
 
 .card-deck {
   justify-content: center;
+  /* align-items: center; */
 }
 .card {
   width: 18rem !important;
   flex: unset !important;
   margin: 10px !important;
+  border: none !important;
 }
 .imdb-logo {
-  width: 90px;
+  width: 80px;
   max-width: 100px;
+}
+
+@media only screen and (min-width: 576px) {
+  .form-inline {
+    justify-content: center !important;
+  }
 }

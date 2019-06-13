@@ -51,7 +51,7 @@ class Movies extends Component {
       <div>
         <form className="form-inline my-2 my-lg-0" onSubmit={this.onSubmit}>
           <input
-            className="form-control mr-sm-2 col-9"
+            className="form-control mr-sm-2 col-12 col-sm-8"
             id="search-input"
             type="search"
             placeholder="Search"
@@ -61,25 +61,12 @@ class Movies extends Component {
             maxLength="50"
           />
           <button
-            className="btn btn-outline-success my-2 my-sm-0 col-2"
+            className="btn btn-success my-2 my-sm-0 col-4 col-sm-3"
             type="submit"
           >
             Search
           </button>
         </form>
-
-        <div className="row my-3">
-          <div className="col">
-            <div className="card-deck">
-              {searchResults.map(searchResult => (
-                <SearchedMovieResults
-                  key={uuid()}
-                  searchResult={searchResult}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
         {searchResults.length !== 0 ? (
           <div className="d-flex my-4" style={{ justifyContent: "center" }}>
             <Pagination
@@ -102,6 +89,18 @@ class Movies extends Component {
             />
           </div>
         ) : null}
+        <div className="row my-3 fade-in">
+          <div className="col">
+            <div className="card-deck">
+              {searchResults.map(searchResult => (
+                <SearchedMovieResults
+                  key={uuid()}
+                  searchResult={searchResult}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
