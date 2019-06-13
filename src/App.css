@@ -1,7 +1,7 @@
 body {
   font-family: "Merriweather", serif;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
-    url(/static/media/theater-seats.ee5a7ce5.jpg);
+    url(images/theater-seats.jpg);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
