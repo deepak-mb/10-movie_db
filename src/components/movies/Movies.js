@@ -11,7 +11,8 @@ class Movies extends Component {
     query: "",
     searchResults: [],
     totalItemsCount: "",
-    activePage: 1
+    activePage: 1,
+    error: ""
   };
   // Remove this
   // componentDidMount() {
@@ -38,15 +39,20 @@ class Movies extends Component {
   };
   componentWillReceiveProps(nextProps) {
     // console.log(nextProps);
-    const { searchResults, totalItemsCount } = nextProps;
-    this.setState({
-      totalItemsCount: totalItemsCount,
-      searchResults: searchResults
-    });
+    const { searchResults, totalItemsCount, error } = nextProps;
+    if (searchResults) {
+      this.setState({
+        totalItemsCount: totalItemsCount,
+        searchResults: searchResults
+      });
+    } else {
+      this.setState({ error: error });
+      alert("Movie not found!");
+    }
   }
   render() {
     const { searchResults, totalItemsCount, activePage } = this.state;
-    // console.log(searchResults);
+    // console.log(error);
     return (
       <div>
         <form className="form-inline my-2 my-lg-0" onSubmit={this.onSubmit}>
@@ -114,7 +120,8 @@ Movies.propTypes = {
 
 const mapStateToProps = state => ({
   searchResults: state.movies.searchResults,
-  totalItemsCount: state.movies.totalItemsCount
+  totalItemsCount: state.movies.totalItemsCount,
+  error: state.movies.error
 });
 
 export default connect(

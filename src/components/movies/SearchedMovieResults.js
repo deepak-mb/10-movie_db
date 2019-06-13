@@ -15,40 +15,40 @@ class SearchedMovieResults extends Component {
   render() {
     const { Poster, Title, Type, Year, imdbID } = this.props.searchResult;
     // console.log(Poster);
-
-    return (
-      <div className="card">
-        <img
-          src={Poster}
-          className="card-img-top"
-          alt="Poster not found"
-          onError={this.addDefaultSrc}
-        />
-        <div className="card-body">
-          <h5 className="card-title">{Title}</h5>
-          <p className="card-text" style={{ textTransform: "capitalize" }}>
-            Type: {Type}
-          </p>
-          <p className="card-text" style={{ textTransform: "capitalize" }}>
-            Year released: {Year}
-          </p>
-        </div>
-        <div className="card-footer">
-          <Link
-            to={`moviedetails/${imdbID}`}
-            href={`http://www.omdbapi.com/?i=${imdbID}&apikey=13b1230d`}
-            className="btn btn-primary mx-1"
-          >
-            Read More
-          </Link>
-          <a
-            href={`https://www.imdb.com/title/${imdbID}`}
-            className="d-inline-block"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={imdblogo} alt="" className="imdb-logo" />
-            {/* <i
+    if (this.props.searchResult) {
+      return (
+        <div className="card">
+          <img
+            src={Poster}
+            className="card-img-top"
+            alt="Poster not found"
+            onError={this.addDefaultSrc}
+          />
+          <div className="card-body">
+            <h5 className="card-title">{Title}</h5>
+            <p className="card-text" style={{ textTransform: "capitalize" }}>
+              Type: {Type}
+            </p>
+            <p className="card-text" style={{ textTransform: "capitalize" }}>
+              Year released: {Year}
+            </p>
+          </div>
+          <div className="card-footer">
+            <Link
+              to={`moviedetails/${imdbID}`}
+              href={`http://www.omdbapi.com/?i=${imdbID}&apikey=13b1230d`}
+              className="btn btn-primary mx-1"
+            >
+              Read More
+            </Link>
+            <a
+              href={`https://www.imdb.com/title/${imdbID}`}
+              className="d-inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={imdblogo} alt="" className="imdb-logo" />
+              {/* <i
               className="fa fa-imdb"
               aria-hidden="true"
               style={{
@@ -56,10 +56,13 @@ class SearchedMovieResults extends Component {
                 fontSize: "4rem"
               }}
             /> */}
-          </a>
+            </a>
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return <p>Loading........</p>;
+    }
   }
 }
 

@@ -1,15 +1,22 @@
-import { SEARCH_MOVIE, GET_MOVIE_DETAILS } from "./types";
+import { SEARCH_MOVIE, GET_MOVIE_DETAILS, ERROR } from "./types";
 import axios from "axios";
 
 export const searchMovie = (query, page) => dispatch => {
   axios
     .get(`https://www.omdbapi.com/?s=${query}&apikey=13b1230d&page=${page}`)
     .then(res => {
-      //   console.log(res);
-      dispatch({
-        type: SEARCH_MOVIE,
-        payload: res
-      });
+      // console.log(res);
+      if (res.data.Response === "False") {
+        dispatch({
+          type: ERROR,
+          payload: res.data.Error
+        });
+      } else {
+        dispatch({
+          type: SEARCH_MOVIE,
+          payload: res
+        });
+      }
     });
 };
 

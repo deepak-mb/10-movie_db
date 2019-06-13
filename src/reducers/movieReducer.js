@@ -1,9 +1,10 @@
-import { SEARCH_MOVIE, GET_MOVIE_DETAILS } from "../actions/types";
+import { SEARCH_MOVIE, GET_MOVIE_DETAILS, ERROR } from "../actions/types";
 
 const initialState = {
   searchResults: [],
   totalItemsCount: "",
-  movieDetails: []
+  movieDetails: [],
+  error: ""
 };
 
 export default function(state = initialState, action) {
@@ -16,11 +17,16 @@ export default function(state = initialState, action) {
       };
 
     case GET_MOVIE_DETAILS:
-      // console.log(action.payload);
+      console.log(action.payload);
       return {
         movieDetails: action.payload
       };
 
+    case ERROR:
+      // console.log(action.payload);
+      return {
+        error: action.payload
+      };
     default:
       return state;
   }
